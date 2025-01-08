@@ -1,16 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
-	var arr [3]string
-	fmt.Println(arr)
+	var s []string
+	fmt.Println(s)
 
-	arr = [3]string{"Coffe", "Espresso", "Cappucino"}
-	fmt.Println(arr)
+	s = []string{"Coffe", "Espresso", "Cappucino"}
+	fmt.Println(s)
 
-	fmt.Println(arr[1])
-	arr[1] = "Chai Tea"
+	fmt.Println(s[1])
 
-	fmt.Println(arr)
+	s[1] = "Chai Tea"
+
+	fmt.Println(s)
+
+	s = append(s, "Hot Chocolate", "Hot Tead") //Add
+
+	fmt.Println(s)
+
+	slices.Delete(s, 1, 2) //retira apenas o 1
+
+	fmt.Println(s)
 }
